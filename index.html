@@ -1,12 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roger Dávila</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roger Dávila – DevOps Engineer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-weight: 600;
+    }
+    header {
+      background: url('402ddd13-0ca0-4498-b10c-40bb4e52bced.png') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1c1c1c;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 0.9rem;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .skills-list, .experience-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li, .experience-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .skills-list li::before, .experience-list li::before {
+      content: '\2022';
+      color: #00bcd4;
+      position: absolute;
+      left: 0;
+    }
+    .experience-item {
+      margin-bottom: 40px;
+    }
+    .experience-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    .experience-item span {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    footer {
+      background-color: #1c1c1c;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.8rem;
+    }
+    .contact-links a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Roger Dávila</h1>
-    <p>I'm a software engineer with a passion for building web applications.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <div class="content">
+      <h1>Roger Dávila</h1>
+      <p>DevOps Engineer specializing in AWS, Kubernetes, and modern cloud infrastructure.</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a software and DevOps engineer from Monterrey, Mexico, with a passion for building
+      scalable and secure cloud-native systems. My journey started with Java and web
+      application development, and has evolved into designing, automating and operating
+      infrastructure on AWS using Kubernetes, Terraform, and CI/CD pipelines. I believe in
+      continuous learning and leveraging technology to drive meaningful change.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Programming:</strong> Java, JavaScript (Angular), basic Python</li>
+      <li><strong>DevOps Tools:</strong> GitHub Actions, Jenkins, Terraform, CloudFormation</li>
+      <li><strong>Cloud:</strong> Amazon Web Services (IAM, EKS, EC2, S3, RDS, Lambda, Route53, ECS Fargate, ECR)</li>
+      <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, Helm</li>
+      <li><strong>Databases:</strong> Oracle, SQL Server, PostgreSQL</li>
+      <li><strong>Other:</strong> REST & SOAP APIs, shell scripting</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>DevSecOps Engineer – Guardline</h3>
+      <span>September 2024 – Present</span>
+      <ul class="experience-list">
+        <li>Analyze and remediate incidents and vulnerabilities across microservices.</li>
+        <li>Design and implement deployment strategies for all Guardline services.</li>
+        <li>Build and maintain CI/CD pipelines using GitHub Actions.</li>
+        <li>Create infrastructure as code with Terraform and automate onboarding for new tenants.</li>
+        <li>Operate and manage AWS Elastic Kubernetes Service clusters and Helm charts.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>DevSecOps Engineer – Millicom</h3>
+      <span>May 2022 – August 2024</span>
+      <ul class="experience-list">
+        <li>Resolved incidents and implemented security fixes across deployments.</li>
+        <li>Created continuous integration and delivery workflows using GitHub Actions.</li>
+        <li>Developed infrastructure templates using AWS CloudFormation.</li>
+        <li>Provided cloud architecture solutions on AWS.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Software Engineer – SMX Services & Consulting</h3>
+      <span>September 2020 – April 2022</span>
+      <ul class="experience-list">
+        <li>Maintained and improved existing Java applications.</li>
+        <li>Built CI/CD pipelines with Jenkins and introduced automated testing.</li>
+        <li>Performed code reviews and delivered feature enhancements.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Application Development Senior Analyst – Accenture</h3>
+      <span>January 2020 – September 2020</span>
+      <ul class="experience-list">
+        <li>Analyzed incidents and resolved issues in production and staging environments.</li>
+        <li>Developed new features and improvements for enterprise applications.</li>
+        <li>Performed code reviews to ensure quality and maintainability.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Platform Engineer Sr. – Ecaresoft Inc.</h3>
+      <span>February 2019 – October 2019</span>
+      <ul class="experience-list">
+        <li>Established best practices for software development and deployment.</li>
+        <li>Implemented CI/CD pipelines for non‑production and production environments.</li>
+        <li>Promoted DevOps culture and automation across the organization.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Software Architecture Analyst – Seguros Banorte</h3>
+      <span>February 2018 – January 2019</span>
+      <ul class="experience-list">
+        <li>Recommended new technologies and defined application architectures for new projects.</li>
+        <li>Created guidelines to improve software quality across teams.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Software Engineer Jr. – Softtek Information Services</h3>
+      <span>January 2014 – January 2018</span>
+      <ul class="experience-list">
+        <li>Provided maintenance and support for web applications, including bug fixes and performance improvements.</li>
+        <li>Developed enhancements and new features based on client requirements.</li>
+        <li>Supported end users and improved overall application quality.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="skills-list">
+      <li>AWS Certified Solutions Architect – Associate (2024)</li>
+      <li>AWS Certified Cloud Practitioner (2023)</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio placeholder: highlight GitHub link -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>You can explore my open source projects on
+      <a href="https://github.com/rogerdavila" target="_blank" style="color:#00bcd4;">GitHub</a>.
+      I share various experiments, infrastructure templates and learning projects there.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to work together or just say hello, feel free to reach out via email or connect on my professional networks.</p>
+    <div class="contact-links">
+      <a href="mailto:rog.davila94@gmail.com">rog.davila94@gmail.com</a>
+      <a href="https://github.com/rogerdavila" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rogerdavila" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <script>document.write(new Date().getFullYear());</script> Roger Dávila. All rights reserved.
+  </footer>
 </body>
 </html>
