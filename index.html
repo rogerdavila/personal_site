@@ -1,255 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roger Dávila – DevOps Engineer</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Roger Dávila — DevOps / Cloud Engineer</title>
+  <meta name="description" content="Roger Dávila — DevOps/Cloud Engineer. AWS, Kubernetes (EKS), Terraform, GitHub Actions, Cloud Security. Minimalist portfolio and contact." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roger Dávila — DevOps / Cloud" />
+  <meta property="og:description" content="AWS | Kubernetes | Terraform | Cloud Security" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rogerdavila.com" />
+  <meta property="og:image" content="https://rogerdavila.com/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roger Dávila — DevOps / Cloud" />
+  <meta name="twitter:description" content="AWS | Kubernetes | Terraform | Cloud Security" />
+  <meta name="twitter:image" content="https://rogerdavila.com/assets/og-image.png" />
+
+  <link rel="icon" href="/assets/rd.svg" type="image/svg+xml" />
+  <link rel="preload" href="/assets/rd.svg" as="image" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Minimal, system fonts (sin tracking) -->
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      margin: 0;
-      font-weight: 600;
-    }
-    header {
-      background: url('402ddd13-0ca0-4498-b10c-40bb4e52bced.png') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 0;
-    }
-    header .content {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1c1c1c;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: #e0e0e0;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 0.9rem;
-    }
-    nav a:hover {
-      color: #00bcd4;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .skills-list, .experience-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    .skills-list li, .experience-list li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-    .skills-list li::before, .experience-list li::before {
-      content: '\2022';
-      color: #00bcd4;
-      position: absolute;
-      left: 0;
-    }
-    .experience-item {
-      margin-bottom: 40px;
-    }
-    .experience-item h3 {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-    }
-    .experience-item span {
-      font-size: 0.85rem;
-      color: #888;
-    }
-    footer {
-      background-color: #1c1c1c;
-      color: #aaa;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.8rem;
-    }
-    .contact-links a {
-      color: #00bcd4;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-    .contact-links a:hover {
-      text-decoration: underline;
-    }
+    :root { --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
   </style>
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roger Ivan Dávila Reyna",
+    "jobTitle": "DevOps / Cloud Engineer",
+    "url": "https://rogerdavila.com",
+    "email": "mailto:rog.davila94@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/rogerdavila",
+      "https://github.com/rogerdavila"
+    ],
+    "knowsAbout": ["AWS","Kubernetes","Terraform","GitHub Actions","Cloud","Cloud Security"]
+  }
+  </script>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header id="home">
-    <div class="content">
-      <h1>Roger Dávila</h1>
-      <p>DevOps Engineer specializing in AWS, Kubernetes, and modern cloud infrastructure.</p>
-    </div>
+  <!-- Top nav (sticky) -->
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="/assets/rd.svg" alt="RD logo" width="28" height="28" />
+      <span>Roger Dávila</span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
+  <!-- Hero -->
+  <section id="top" class="hero reveal">
+    <div class="hero-inner">
+      <h1>DevOps / Cloud Engineer</h1>
+      <p class="kicker">AWS · Kubernetes (EKS) · Terraform · GitHub Actions · Cloud Security</p>
+      <div class="cta-row">
+        <a class="button primary" href="mailto:rog.davila94@gmail.com">Email me</a>
+        <a class="button ghost" href="https://www.linkedin.com/in/rogerdavila" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button ghost" href="https://github.com/rogerdavila" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <h2>About</h2>
     <p>
-      I'm a software and DevOps engineer from Monterrey, Mexico, with a passion for building
-      scalable and secure cloud-native systems. My journey started with Java and web
-      application development, and has evolved into designing, automating and operating
-      infrastructure on AWS using Kubernetes, Terraform, and CI/CD pipelines. I believe in
-      continuous learning and leveraging technology to drive meaningful change.
+      I’m <strong>Roger Ivan Dávila Reyna</strong>, a DevOps/Cloud Engineer focused on building
+      <strong>secure, resilient, and cost-effective cloud platforms</strong>. I work primarily with
+      <strong>AWS (EKS, RDS, S3, IAM, Route53)</strong>, <strong>Terraform</strong>, <strong>Helm</strong>,
+      and <strong>GitHub Actions</strong>. I like clean infrastructure, fast pipelines,
+      and pragmatic automation that teams actually use.
+    </p>
+    <p>
+      Currently helping startups ship faster with <strong>multi-tenant Kubernetes</strong>,
+      <strong>GitOps</strong>, and <strong>Cloud guardrails</strong>.
     </p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Programming:</strong> Java, JavaScript (Angular), basic Python</li>
-      <li><strong>DevOps Tools:</strong> GitHub Actions, Jenkins, Terraform, CloudFormation</li>
-      <li><strong>Cloud:</strong> Amazon Web Services (IAM, EKS, EC2, S3, RDS, Lambda, Route53, ECS Fargate, ECR)</li>
-      <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes, Helm</li>
-      <li><strong>Databases:</strong> Oracle, SQL Server, PostgreSQL</li>
-      <li><strong>Other:</strong> REST & SOAP APIs, shell scripting</li>
+  <!-- Skills -->
+  <section id="skills" class="section reveal">
+    <h2>Key Skills</h2>
+    <ul class="tags">
+      <li>AWS</li><li>Kubernetes (EKS)</li><li>Terraform</li><li>Helm</li><li>GitHub Actions</li>
+      <li>IaC</li><li>GitOps</li><li>Cloud Security</li><li>Docker</li><li>PostgreSQL</li>
+      <li>Observability</li><li>Python (basic)</li><li>Java/Spring</li>
     </ul>
+    <div class="cards">
+      <article class="card">
+        <h3>Cloud & Infra</h3>
+        <p>Designing AWS architectures for availability, isolation by tenant, and cost control.</p>
+      </article>
+      <article class="card">
+        <h3>Platform & Kubernetes</h3>
+        <p>EKS with Helm, namespaces per tenant, PDBs, NetworkPolicies, External Secrets, GitOps.</p>
+      </article>
+      <article class="card">
+        <h3>CI/CD & Automation</h3>
+        <p>GitHub Actions pipelines: build, test, scan, deploy. Reusable Terraform/Helm modules.</p>
+      </article>
+      <article class="card">
+        <h3>Cloud</h3>
+        <p>Guardrails: secrets, IAM least-privilege, image scanning, SSL/TLS, policy enforcement.</p>
+      </article>
+    </div>
   </section>
 
-  <section id="experience">
+  <!-- Experience (compact timeline) -->
+  <section id="experience" class="section reveal">
     <h2>Experience</h2>
-    <div class="experience-item">
-      <h3>DevSecOps Engineer – Guardline</h3>
-      <span>September 2024 – Present</span>
-      <ul class="experience-list">
-        <li>Analyze and remediate incidents and vulnerabilities across microservices.</li>
-        <li>Design and implement deployment strategies for all Guardline services.</li>
-        <li>Build and maintain CI/CD pipelines using GitHub Actions.</li>
-        <li>Create infrastructure as code with Terraform and automate onboarding for new tenants.</li>
-        <li>Operate and manage AWS Elastic Kubernetes Service clusters and Helm charts.</li>
-      </ul>
+    <ol class="timeline">
+      <li>
+        <div>
+          <h3>Cloud Engineer — Guardline <span class="time">2024–Present</span></h3>
+          <ul>
+            <li>Built AWS EKS platform with Helm + GitOps and per-tenant isolation.</li>
+            <li>CI/CD with GitHub Actions, Terraform IaC, automated tenant onboarding.</li>
+            <li>Security: IAM roles, External Secrets, NetworkPolicies, TLS, vulnerability remediation.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Cloud Engineer — Millicom <span class="time">2022–2024</span></h3>
+          <ul>
+            <li>CI/CD at scale (GitHub Actions), AWS CloudFormation, incident & vuln management.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Software Engineer — SMX Services & Consulting <span class="time">2020–2022</span></h3>
+          <ul>
+            <li>Jenkins pipelines, unit testing, reviews, enhancements on existing systems.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Previous roles (Accenture, Ecaresoft, Banorte, Softtek) <span class="time">2014–2020</span></h3>
+          <ul>
+            <li>Architecture, platform engineering, web development, performance improvements.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Portfolio (starter) -->
+  <section id="projects" class="section reveal">
+    <h2>Featured Work</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Multi-tenant Kubernetes on AWS</h3>
+        <p>Isolated namespaces per tenant, EKS, Helm wrappers, External Secrets, GitOps.</p>
+      </article>
+      <article class="card">
+        <h3>Tenant Onboarding Automation</h3>
+        <p>Terraform modules + GitHub Actions: infra spin-up, secrets, deploy pipelines.</p>
+      </article>
+      <article class="card">
+        <h3>Observability Baseline</h3>
+        <p>Health probes, structured logs, minimal tracing standard, and SLO dashboards.</p>
+      </article>
     </div>
-    <div class="experience-item">
-      <h3>DevSecOps Engineer – Millicom</h3>
-      <span>May 2022 – August 2024</span>
-      <ul class="experience-list">
-        <li>Resolved incidents and implemented security fixes across deployments.</li>
-        <li>Created continuous integration and delivery workflows using GitHub Actions.</li>
-        <li>Developed infrastructure templates using AWS CloudFormation.</li>
-        <li>Provided cloud architecture solutions on AWS.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Software Engineer – SMX Services & Consulting</h3>
-      <span>September 2020 – April 2022</span>
-      <ul class="experience-list">
-        <li>Maintained and improved existing Java applications.</li>
-        <li>Built CI/CD pipelines with Jenkins and introduced automated testing.</li>
-        <li>Performed code reviews and delivered feature enhancements.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Application Development Senior Analyst – Accenture</h3>
-      <span>January 2020 – September 2020</span>
-      <ul class="experience-list">
-        <li>Analyzed incidents and resolved issues in production and staging environments.</li>
-        <li>Developed new features and improvements for enterprise applications.</li>
-        <li>Performed code reviews to ensure quality and maintainability.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Platform Engineer Sr. – Ecaresoft Inc.</h3>
-      <span>February 2019 – October 2019</span>
-      <ul class="experience-list">
-        <li>Established best practices for software development and deployment.</li>
-        <li>Implemented CI/CD pipelines for non‑production and production environments.</li>
-        <li>Promoted DevOps culture and automation across the organization.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Software Architecture Analyst – Seguros Banorte</h3>
-      <span>February 2018 – January 2019</span>
-      <ul class="experience-list">
-        <li>Recommended new technologies and defined application architectures for new projects.</li>
-        <li>Created guidelines to improve software quality across teams.</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Software Engineer Jr. – Softtek Information Services</h3>
-      <span>January 2014 – January 2018</span>
-      <ul class="experience-list">
-        <li>Provided maintenance and support for web applications, including bug fixes and performance improvements.</li>
-        <li>Developed enhancements and new features based on client requirements.</li>
-        <li>Supported end users and improved overall application quality.</li>
-      </ul>
+    <p class="muted">More case studies coming soon.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section reveal">
+    <h2>Let’s Work</h2>
+    <p>If you need a pragmatic DevOps/Cloud partner for AWS & Kubernetes, let’s talk.</p>
+    <div class="cta-row">
+      <a class="button primary" href="mailto:rog.davila94@gmail.com">rog.davila94@gmail.com</a>
+      <a class="button ghost" href="https://www.linkedin.com/in/rogerdavila" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="button ghost" href="https://github.com/rogerdavila" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul class="skills-list">
-      <li>AWS Certified Solutions Architect – Associate (2024)</li>
-      <li>AWS Certified Cloud Practitioner (2023)</li>
-    </ul>
-  </section>
-
-  <!-- Portfolio placeholder: highlight GitHub link -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <p>You can explore my open source projects on
-      <a href="https://github.com/rogerdavila" target="_blank" style="color:#00bcd4;">GitHub</a>.
-      I share various experiments, infrastructure templates and learning projects there.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>If you'd like to work together or just say hello, feel free to reach out via email or connect on my professional networks.</p>
-    <div class="contact-links">
-      <a href="mailto:rog.davila94@gmail.com">rog.davila94@gmail.com</a>
-      <a href="https://github.com/rogerdavila" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/rogerdavila" target="_blank">LinkedIn</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; <script>document.write(new Date().getFullYear());</script> Roger Dávila. All rights reserved.
+  <footer class="footer">
+    <p>© <span id="y"></span> Roger Dávila · Built with HTML & CSS</p>
   </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
